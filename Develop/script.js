@@ -1,10 +1,45 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+var time9amEl = $('#9AM');
+var time10amEl = $('#10AM');
+var time11amEl = $('#11AM');
+var time12pmEl = $('#12PM');
+var time1pmEl = $('#1PM');
+var time2pmEl = $('#2PM');
+var time3pmEl = $('#3PM');
+var time4pmEl = $('#4PM');
+var time5pmEl = $('#5PM');
+
+var timeArrayEl = [
+	time9amEl,
+	time10amEl,
+	time11amEl,
+	time12pmEl,
+	time1pmEl,
+	time2pmEl,
+	time3pmEl,
+	time4pmEl,
+	time5pmEl,
+];
+
 function displayTime() {
+	// Displays time under the title on the top of the screen
 	var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
 	$('#currentDay').text(rightNow);
+	// stores the current time in the format "1-12 /AM or PM"
+	var presentEl = dayjs().format('hA');
+
+	// Loop to iterate over the timeArrayEl
+	for (var i = 0; i < timeArrayEl.length; i++) {
+		// if statement to add class/color block for the state of time
+		if (presentEl > timeArrayEl[i].data('hour')) {
+			timeArrayEl[i].addClass('past');
+		} else if (presentEl === timeArrayEl[i].attr('data-hour')) {
+			timeArrayEl[i].addClass('present');
+		} else {
+			timeArrayEl[i].addClass('future');
+		}
+	}
 }
+
 $(function () {
 	// TODO: Add a listener for click events on the save button. This code should
 	// use the id in the containing time-block as a key to save the user input in
@@ -25,5 +60,6 @@ $(function () {
 	//
 	// TODO: Add code to display the current date in the header of the page.
 });
+
 displayTime();
 setInterval(displayTime, 1000);
