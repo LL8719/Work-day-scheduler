@@ -43,9 +43,10 @@ function displayTime() {
 var saveButtonEl = $('.saveBtn');
 
 saveButtonEl.on('click', function () {
-	userInput = $(this).val().trim();
-
+	userInput = $(this).siblings('#user-input').val().trim();
+	hourLog = $(this).parent().attr('id');
 	console.log(userInput);
+	localStorage.setItem(hourLog, userInput);
 });
 
 // TODO: Add a listener for click events on the save button. This code should
