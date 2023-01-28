@@ -45,12 +45,13 @@ function displayTime() {
 	var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
 	$('#currentDay').text(rightNow);
 	// stores the current time in the format "1-12 /AM or PM"
-	var presentEl = dayjs().format('hA');
+	var presentEl = dayjs().format('HH');
 
 	// Loop to iterate over the timeArrayEl
 	for (var i = 0; i < timeArrayEl.length; i++) {
+		timeArrayEl[i].removeClass('past present future');
 		// if statement to add class/color block for the state of time
-		if (presentEl > timeArrayEl[i].data('hour')) {
+		if (presentEl > timeArrayEl[i].attr('data-hour')) {
 			timeArrayEl[i].addClass('past');
 		} else if (presentEl === timeArrayEl[i].attr('data-hour')) {
 			timeArrayEl[i].addClass('present');
