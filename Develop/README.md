@@ -30,4 +30,4 @@ The following image shows the web application's appearance:
 ## Screenshot
 
 The following link displays the application on the web.
-![screenshot](./Develop/images/Work-day.png)
+![screenshot](./images/Screenshot%202023-01-28%20093730.png)
