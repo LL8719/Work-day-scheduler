@@ -27,19 +27,24 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <!-- <button id="clear-all">Clear All</button> -->
     </header>
     <div class="container-lg px-5 border border-dark rounded ">
      
-
+      
       <!-- Start of time sloth -->
       <div id="hour9" class="row time-block">
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description border border-dark " rows="3" id="9AM" data-hour="09" > </textarea id="user-input">
+        <textarea class="col-8 col-md-9 description border border-dark user-input" rows="3" id="9AM" data-hour="09" ></textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
-          <i class="fas fa-save" aria-hidden="true"></i>
+         <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+        <!-- Clear Button -->
+        <button id="clear-9" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+          <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
         </button>
       </div>
       <!-- End of time sloth -->
@@ -49,12 +54,16 @@
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">10AM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description border border-dark" rows="3" id="10AM" data-hour="10AM" > </textarea id="user-input">
+        <textarea  class="col-8 col-md-9 description border border-dark user-input" rows="3" id="10AM" data-hour="10AM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-10" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
       <!-- Example of a future time block. The "future" class adds a green background color. -->
@@ -62,84 +71,112 @@
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description border border-dark" rows="3" id="11AM" data-hour="11AM" > </textarea id="user-input">
+        <textarea  class="col-8 col-md-9 description border border-dark user-input" rows="3" id="11AM" data-hour="11AM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-11" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
       <div id="hour12" class="row time-block">
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">12PM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description border border-dark" rows="3" id="12PM" data-hour="12PM" > </textarea id="user-input">
+        <textarea  class="col-8 col-md-9 description border border-dark user-input" rows="3" id="12PM" data-hour="12PM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-12" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
       <div id="hour1" class="row time-block">
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">1PM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description border border-dark" rows="3" id="1PM" data-hour="1PM" > </textarea id="user-input">
+        <textarea  class="col-8 col-md-9 description border border-dark user-input" rows="3" id="1PM" data-hour="1PM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-1" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
       <div id="hour2" class="row time-block">
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">2PM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description" rows="3" id="2PM" data-hour="2PM" > </textarea id="user-input">
+        <textarea class="col-8 col-md-9 description border border-dark user-input" rows="3" id="2PM" data-hour="2PM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-2" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
       <div id="hour3" class="row time-block">
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">3PM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description" rows="3" id="3PM" data-hour="3PM" > </textarea id="user-input">
+        <textarea class="col-8 col-md-9 description border border-dark user-input" rows="3" id="3PM" data-hour="3PM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-3" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
       <div id="hour4" class="row time-block">
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">4PM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description" rows="3" id="4PM" data-hour="4PM" > </textarea id="user-input">
+        <textarea  class="col-8 col-md-9 description border border-dark user-input" rows="3" id="4PM" data-hour="4PM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-4" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
       <div id="hour5" class="row time-block">
         <!-- Section that holds the time to the left -->
         <div class="col-2 col-md-1 hour text-center py-3">5PM</div>
         <!-- Text area in the middle -->
-        <textarea id="user-input" class="col-8 col-md-10 description" rows="3" id="5PM" data-hour="5PM" > </textarea id="user-input">
+        <textarea class="col-8 col-md-9 description border border-dark user-input" rows="3" id="5PM" data-hour="5PM" > </textarea id="user-input">
         <!-- Blue Button to the right -->
         <button id="saveButton" class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
-        </button>
-      </div>
+         </button>
+         <!-- Clear Button -->
+         <button id="clear-5" class="btn clearBtn btn-danger col-2 col-md-1" aria-label="save">
+           <i class="fa-sharp fa-solid fa-xmark" aria-hidden="true" id="clear">X</i>
+         </button>
+       </div>
       <!-- End of time sloth -->
 
 
