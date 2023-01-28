@@ -17,6 +17,7 @@ var clear3El = document.querySelector('#clear-3');
 var clear4El = document.querySelector('#clear-4');
 var clear5El = document.querySelector('#clear-5');
 
+//Array for time on time blocks
 var timeArrayEl = [
 	time9amEl,
 	time10amEl,
@@ -60,6 +61,7 @@ function displayTime() {
 		}
 	}
 }
+
 //Save Button
 var saveButtonEl = $('.saveBtn');
 //Function for the click of the save button
@@ -70,6 +72,7 @@ saveButtonEl.on('click', function () {
 	localStorage.setItem(hourLog, userInput);
 });
 
+// Clear Buttons for each timeBlock
 clearEl.addEventListener('click', function () {
 	$('#hour9 .description').val(localStorage.setItem('hour9', ''));
 });
